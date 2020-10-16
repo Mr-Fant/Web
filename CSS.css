@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  background: linear-gradient(#009999, #993366);
+}
+h1{
+  font-family: 'Caveat', cursive;
+   font-weight: 850;
+}
+p{
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  font-weight: 100;
+  margin-left: 50px;
+}
+h3{
+  font-family: 'Pacifico', cursive;
+  font-weight: 550;
+  font-size: 20px;
+  padding-left: 35px;
+}
+li{
+  font-family: 'Caveat', cursive;
+   font-size: 20px;
+}
