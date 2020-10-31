@@ -1,237 +1,244 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet"> 
-  
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
-  
-  <meta charset="utf-8" name="keywords" content="Визитка, ИТМО, Программирование" name="description" content="Сайт визитка студента ИТМО">
-  <title>Гусев Максим М33061</title>
-    <h2 align="center"><strong>Студент Университета ИТМО группы М33061</strong></h1>
-  <h1 align="center"><strong>Гусев Максим Игоревич</strong></h1></head>
-<body>
-  <header>
- <nav>
-<a href="#Биография">Биография</a>
-<a href="#Рисунок">Рисунок</a>
-<a href="#Проект">Проект</a>
-</nav>
-  </header>
-  <main>
-    <article>
-    <section id="<Биография">
-    <h3>Биография:</h3>
-    <p>Меня зовут Гусев Максим, родился я осенью <time>16 октябряю</time>. На данный момент учусь в университете ИТМО на 3 курсе. Мое хобби это автомобили</p>
-      </section>
-<section style="height: 1px; width:108px; padding-left: 700px; padding-top: 0px">
-<h3 style="margin-top: 0px; margin-bottom: 0px; width: 1px; height: 10px">Навыки:</h3>
-<dl>
-<ul>
-<dt><li>Базовые знания программирования:</li></dt>
-<ol>
-  <dd><li>C++</li></dd>
-  <dd><li>C#</li></dd>
-  <dd><li>Git</li></dd>
-  <dd><li>Java</li></dd>
-  </ol>
-  </ul>
-  </dl>
-  </section>
-      <section id="Рисунок" style="padding-right: 681px">
-  <h3 style="margin: 0px; padding-left: 1000px">Мое тотемное животное</h3>
-    <pre style="margin-left: 1000px; margin-top: 10px">
- ,`````.          _________
-' CiCi  `,       /_  ___   \
-'  ^_^   `.     /@ \/@  \   \
- ` , . , '  `.. \__/\___/   /
-                 \_\/______/
-                 /     /\\\\\
-                |     |\\\\\\
-                 \      \\\\\\
-                  \______/\\\\     -ccw-
-            _______ ||_||_______
-           (______(((_(((______(@)
-    </pre>
-   </section>
-      <section id="Проект">
-   <h3>Код клиентской части приложения под андроид</h3>
-   <code>
-     <pre>
-    public class MainActivity extends AppCompatActivity {
+    <head>
+        <link href="CSS.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet"> 
+        
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+        
+        <meta charset="utf-8" name="keywords" content="Визитка, ИТМО, Программирование" name="description" content="Сайт визитка студента ИТМО">
+        <title>Гусев Максим М33061</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#Биография">Биография</a>
+                <a href="#Рисунок">Рисунок</a>
+                <a href="#Проект">Проект</a>
+            </nav>
+        </header>
+        <h2 align="center"><strong>Студент Университета ИТМО группы М33061</strong></h2>
+        <h1 align="center"><strong>Гусев Максим Игоревич</strong></h1>
+        <main>
+            <article>
+                <section id="<Биография">
+                    <h3>Биография:</h3>
+                    <p>Меня зовут Гусев Максим, родился я осенью <time>16 октябряю</time>. На данный момент учусь в университете ИТМО на 3 курсе. Мое хобби это автомобили</p>
+                </section>
+                <container>
+                    <section>
+                        <h3>Навыки:</h3>
+                        <dl>
+                            <ul>
+                                <dt><li>Базовые знания программирования:</li></dt>
+                                <ol>
+                                    <dd><li>C++</li></dd>
+                                    <dd><li>C#</li></dd>
+                                    <dd><li>Git</li></dd>
+                                    <dd><li>Java</li></dd>
+                                </ol>
+                            </ul>
+                        </dl>
+                    </section>
+                    <section id="Рисунок">
+                        <h3>Мое тотемное животное</h3>
+                            <pre>
+    ,`````.          _________
+    ' CiCi  `,       /_  ___   \
+    '  ^_^   `.     /@ \/@  \   \
+    ` , . , '  `.. \__/\___/   /
+                    \_\/______/
+                    /     /\\\\\
+                    |     |\\\\\\
+                    \      \\\\\\
+                    \______/\\\\     -ccw-
+                _______ ||_||_______
+            (______(((_(((______(@)
+                            </pre>
+                    </section>
+                </container>
+                <section id="Проект">
+                    <h3>Код клиентской части приложения под андроид</h3>
+                        <code>
+                            <pre>
+        public class MainActivity extends AppCompatActivity {
 
-    public static TextView textView;
-    private TextureView cameraTextureView;
-    private Button readButton;
-    private HandlerThread backgroundThread;
-    private ImageView imageView;
-    private Spinner spinner;
-    public static String qrResult = "0";
-    Bitmap barcode_bitmap;
+        public static TextView textView;
+        private TextureView cameraTextureView;
+        private Button readButton;
+        private HandlerThread backgroundThread;
+        private ImageView imageView;
+        private Spinner spinner;
+        public static String qrResult = "0";
+        Bitmap barcode_bitmap;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        @RequiresApi(api = Build.VERSION_CODES.M)
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
-                (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED))
-        {
-            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
+                    (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED))
+            {
+                requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+            }
+
+            textView = findViewById(R.id.textView);
+            readButton = findViewById(R.id.readButton);
+            imageView = findViewById(R.id.imageView);
+            spinner = findViewById(R.id.spinner);
+
+            readButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivityForResult(new Intent(getApplicationContext(), ScanCodeActivity.class), 1);
+                }
+            });
         }
 
-        textView = findViewById(R.id.textView);
-        readButton = findViewById(R.id.readButton);
-        imageView = findViewById(R.id.imageView);
-        spinner = findViewById(R.id.spinner);
-
-        readButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(new Intent(getApplicationContext(), ScanCodeActivity.class), 1);
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            if (resultCode == RESULT_OK) {
+                new Client().execute();
             }
-        });
-    }
+        }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
+        private static Bitmap encodeAsBitmap(String contents, BarcodeFormat format, int img_width, int img_height)
+                throws WriterException {
+            String contentsToEncode = contents;
+            if (contentsToEncode == null) {
+                return null;
+            }
+            Map<EncodeHintType, Object> hints = null;
+            String encoding = guessAppropriateEncoding(contentsToEncode);
+            if (encoding != null) {
+                hints = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
+                hints.put(EncodeHintType.CHARACTER_SET, encoding);
+            }
+            MultiFormatWriter writer = new MultiFormatWriter();
+            BitMatrix result;
+            try {
+                result = writer.encode(contentsToEncode, format, img_width, img_height, hints);
+            } catch (IllegalArgumentException iae) {
+                // Unsupported format
+                return null;
+            }
+            int width = result.getWidth();
+            int height = result.getHeight();
+            int[] pixels = new int[width * height];
+            for (int y = 0; y < height; y++) {
+                int offset = y * width;
+                for (int x = 0; x < width; x++) {
+                    pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
+                }
+            }
+
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+            bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+            return bitmap;
+        }
+
+        private static String guessAppropriateEncoding(CharSequence contents) {
+
+            for (int i = 0; i < contents.length(); i++) {
+                if (contents.charAt(i) > 0xFF) {
+                    return "UTF-8";
+                }
+            }
+            return null;
+        }
+
+        public void getQRButtonClick(View view) throws WriterException {
             new Client().execute();
         }
-    }
+        class Client extends AsyncTask<String, String, String>
+        {
+            String server = "https://secure-refuge-57247.herokuapp.com/ticket";
+            String code;
+            String answer;
+            @SuppressLint("WrongThread")
+            @Override
+            protected String doInBackground(String... strings) {
+                BufferedReader reader = null;
+                try {
+                    @SuppressLint("WrongThread") URL url = new URL(server+"?a="+spinner.getSelectedItemPosition()+"&b="+qrResult);
+                    HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setReadTimeout(10000);
+                    connection.connect();
+                    reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                    answer = reader.readLine();
+                    if(qrResult == "0") {
 
-    private static Bitmap encodeAsBitmap(String contents, BarcodeFormat format, int img_width, int img_height)
-            throws WriterException {
-        String contentsToEncode = contents;
-        if (contentsToEncode == null) {
-            return null;
-        }
-        Map<EncodeHintType, Object> hints = null;
-        String encoding = guessAppropriateEncoding(contentsToEncode);
-        if (encoding != null) {
-            hints = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
-            hints.put(EncodeHintType.CHARACTER_SET, encoding);
-        }
-        MultiFormatWriter writer = new MultiFormatWriter();
-        BitMatrix result;
-        try {
-            result = writer.encode(contentsToEncode, format, img_width, img_height, hints);
-        } catch (IllegalArgumentException iae) {
-            // Unsupported format
-            return null;
-        }
-        int width = result.getWidth();
-        int height = result.getHeight();
-        int[] pixels = new int[width * height];
-        for (int y = 0; y < height; y++) {
-            int offset = y * width;
-            for (int x = 0; x < width; x++) {
-                pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
-            }
-        }
-
-        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-        bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
-        return bitmap;
-    }
-
-    private static String guessAppropriateEncoding(CharSequence contents) {
-
-        for (int i = 0; i < contents.length(); i++) {
-            if (contents.charAt(i) > 0xFF) {
-                return "UTF-8";
-            }
-        }
-        return null;
-    }
-
-    public void getQRButtonClick(View view) throws WriterException {
-        new Client().execute();
-    }
-    class Client extends AsyncTask<String, String, String>
-    {
-        String server = "https://secure-refuge-57247.herokuapp.com/ticket";
-        String code;
-        String answer;
-        @SuppressLint("WrongThread")
-        @Override
-        protected String doInBackground(String... strings) {
-            BufferedReader reader = null;
-            try {
-                @SuppressLint("WrongThread") URL url = new URL(server+"?a="+spinner.getSelectedItemPosition()+"&b="+qrResult);
-                HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setReadTimeout(10000);
-                connection.connect();
-                reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                answer = reader.readLine();
-                if(qrResult == "0") {
-
-                    //imageView.setImageBitmap(barcode_bitmap);
+                        //imageView.setImageBitmap(barcode_bitmap);
 
 
-                    if(answer.compareTo("No more tickets") == 0){
-                        textView.setTextColor(Color.rgb(128, 0, 128));
-                        textView.setText(answer);
-                    }
-                    else{
-                        barcode_bitmap = encodeAsBitmap(answer, BarcodeFormat.QR_CODE, 300, 300);
-                    }
-                }
-                else {
-                    if(answer.compareTo("correct") == 0){
-                        textView.setTextColor(Color.GREEN);
+                        if(answer.compareTo("No more tickets") == 0){
+                            textView.setTextColor(Color.rgb(128, 0, 128));
+                            textView.setText(answer);
+                        }
+                        else{
+                            barcode_bitmap = encodeAsBitmap(answer, BarcodeFormat.QR_CODE, 300, 300);
+                        }
                     }
                     else {
-                        textView.setTextColor(Color.RED);
+                        if(answer.compareTo("correct") == 0){
+                            textView.setTextColor(Color.GREEN);
+                        }
+                        else {
+                            textView.setTextColor(Color.RED);
+                        }
+                        textView.setText(answer);
                     }
-                    textView.setText(answer);
+                } catch (IOException | WriterException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException | WriterException e) {
-                e.printStackTrace();
-            }
-            finally {
-                if (reader != null) {
-                    try {
-                        reader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                finally {
+                    if (reader != null) {
+                        try {
+                            reader.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
+                return null;
             }
-            return null;
-        }
 
-        @Override
-        protected void onPreExecute()
-        {
-            super.onPreExecute();
-        }
+            @Override
+            protected void onPreExecute()
+            {
+                super.onPreExecute();
+            }
 
-        @Override
-        protected void onPostExecute(String result)
-        {
-           super.onPostExecute(result);
-            imageView.setImageBitmap(barcode_bitmap);
-        }
+            @Override
+            protected void onPostExecute(String result)
+            {
+            super.onPostExecute(result);
+                imageView.setImageBitmap(barcode_bitmap);
+            }
 
+        }
     }
-}
 
-     </pre>
-   </code>
-   </section>
-   <section>
-   <div style="text-align: center">
-   <h3>Любимая цитата</h3>
-   <sub align="center"><em>"А сегодня в завтрашний день не все могут смотреть. Вернее, смотреть могут не только лишь все, мало кто может это делать"</em></sub></div>
-   </section>
-  </main>
-  </article>
-<footer>
-  <div style="text-align:end; margin: 20px"><h1>Почта:
-  <a href="mailto:maxim.i.gusev@gmail.com"> maxim.i.gusev@gmail.com</a>
-    </h1></div>
-</footer>   
-  </body>
-   </html> 
+                            </pre>
+                        </code>
+                </section>
+                <section>
+                    <div style="text-align: center">
+                        <h3>Любимая цитата</h3>
+                        <sub align="center"><em>"А сегодня в завтрашний день не все могут смотреть. Вернее, смотреть могут не только лишь все, мало кто может это делать"</em></sub></div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <div style="float:right; margin: 20px">
+                <h1>Почта:
+                    <a href="mailto:maxim.i.gusev@gmail.com"> maxim.i.gusev@gmail.com</a>
+                </h1>
+            </div>
+        </footer>   
+    </body>
+</html> 
+    
