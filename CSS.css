@@ -26,3 +26,40 @@ li{
   font-family: 'Caveat', cursive;
    font-size: 20px;
 }
+container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+container section{
+  margin: 0px 50px;
+}
+header a{
+    text-decoration: none;
+    color: #9df06d;
+    margin: 0px 20px;
+    transition: 3s;
+}
+header a:hover{
+    color: deeppink;
+    margin: 0px 50px;
+}
+footer a:hover{
+    color: gold;
+}
+footer a{
+    transition: 5s;
+    transition-timing-function: ease;
+}
+#Рисунок pre{
+    transition: 5s;
+    border-radius: 2vw;
+    border-width: 0px;
+    border-style: outset;
+    border-color: red;
+}
+#Рисунок pre:hover{
+    background-color: #080808;
+    color: #eb6bda;
+    border-width: 3px;
+}
