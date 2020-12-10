@@ -1,7 +1,9 @@
 var array = [];
+max = 0;
+min = 0;
 for(i = 0; i < 1000; i++)
 {
-	array.push(Math.round( Math.random() * 100 ));
+  array.push(Math.round( Math.random() * (max - min) - min));
 }
 console.log(array);
 
@@ -45,12 +47,13 @@ function QuickSort(arr) {
         right.push(arr[i]);
       }
     }
+    console.log(this)
     return QuickSort(left).concat(pivot, QuickSort(right));
   }
 array1 = QuickSort(array)
 console.log(array1)
 
-var tags = document.getElementsByTagName("*");
+let tags = document.getElementsByTagName("*");
 let r = []
 for (var i = 1; i < tags.length; i++) {
     r.push(tags[i].localName)
@@ -58,3 +61,17 @@ for (var i = 1; i < tags.length; i++) {
 let result = r.filter((v, i, a) => a.indexOf(v) == i)
     .map(v => [v, r.filter(x => x == v).length]);
 console.log(result);
+
+window.onload=() => {
+  let some = document.getElementById('some')
+  some.ondblclick = () => {
+    some.requestFullscreen()
+  }
+  let button = document.getElementById('contact')
+  console.log(button)
+  button.onclick = (e) => {
+      console.log(e.pageX, e.pageY)
+      let abc = document.getElementById('info')
+      abc.setAttribute('class', 'panel-show')
+  }
+}
