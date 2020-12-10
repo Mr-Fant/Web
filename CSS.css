@@ -6,6 +6,17 @@ body {
   line-height: 20px;
   background: linear-gradient(#009999, #993366);
 }
+
+img{
+  margin-right: 50px;
+}
+
+div3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1{
   font-family: 'Caveat', cursive;
    font-weight: 850;
@@ -62,4 +73,28 @@ footer a{
     background-color: #080808;
     color: #eb6bda;
     border-width: 3px;
+}
+
+.accordion {
+  color: #444;
+  background-color: #eb6bda;
+  cursor: pointer;
+  padding: 14px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.panel-show {
+  padding: 0 18px;
+  display: block;
+  overflow: hidden;
 }
